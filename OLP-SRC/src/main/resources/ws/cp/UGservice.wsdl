@@ -1,0 +1,91 @@
+<wsdl:definitions 
+    xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" 
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+    xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:ugdefs="http://defs.webservices.experian.com"
+    xmlns="http://webservices.experian.com"    
+    targetNamespace="http://webservices.experian.com"
+	name="UGService">	
+	
+	<wsdl:types>
+		<xsd:schema>
+			<xsd:import namespace="http://defs.webservices.experian.com" schemaLocation="./NewApplicationXML.xsd" />
+		</xsd:schema>
+	</wsdl:types>
+	<wsdl:message name="InputNewApplicationXML">
+		<wsdl:part name="parameters" element="ugdefs:InputNewApplicationXML" />
+	</wsdl:message>
+	<wsdl:message name="fetchOutputNewApplicationXML">
+		<wsdl:part name="parameters" element="ugdefs:fetchOutputNewApplicationXML" />
+	</wsdl:message>
+	<wsdl:message name="OutputNewApplicationXML">
+		<wsdl:part name="parameters" element="ugdefs:OutputNewApplicationXML" />
+	</wsdl:message>
+	<wsdl:message name="fetchInputNewApplicationXML">
+		<wsdl:part name="parameters" element="ugdefs:fetchInputNewApplicationXML" />
+	</wsdl:message>
+	<wsdl:message name="NewApplicationXMLFault">
+		<wsdl:part name="fault" element="ugdefs:NewApplicationXMLFault" />		
+	</wsdl:message>
+	<wsdl:portType name="TSNPort">
+		<wsdl:operation name="synchronousNewApplicationXML">
+			<wsdl:input message="InputNewApplicationXML" />
+			<wsdl:output message="fetchOutputNewApplicationXML" />
+			<wsdl:fault name="fault" message="NewApplicationXMLFault"/>
+		</wsdl:operation>
+		<wsdl:operation name="asynchronousNewApplicationXML">
+			<wsdl:input message="InputNewApplicationXML" />
+			<wsdl:output message="OutputNewApplicationXML" />
+			<wsdl:fault name="fault" message="NewApplicationXMLFault"/>
+		</wsdl:operation>
+		<wsdl:operation name="fetchNewApplicationXML">
+			<wsdl:input message="fetchInputNewApplicationXML" />
+			<wsdl:output message="fetchOutputNewApplicationXML" />
+			<wsdl:fault name="fault" message="NewApplicationXMLFault"/>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="TSNPortBinding" type="TSNPort">
+		<soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+		<wsdl:operation name="synchronousNewApplicationXML">
+			<soap:operation soapAction="synchronousNewApplicationXML" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+            <wsdl:fault name="fault">
+              <soap:fault use="literal" name="fault" />
+            </wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="asynchronousNewApplicationXML">
+			<soap:operation soapAction="asynchronousNewApplicationXML" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+            <wsdl:fault name="fault">
+              <soap:fault use="literal" name="fault" />
+            </wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="fetchNewApplicationXML">
+			<soap:operation soapAction="fetchNewApplicationXML" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+            <wsdl:fault name="fault">
+              <soap:fault use="literal" name="fault" />
+            </wsdl:fault>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="UGService">
+		<wsdl:port name="TSNPort" binding="TSNPortBinding">
+			<soap:address location="http://localhost:8085/OUGBufferedWebServiceComponent/UGService" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,31 @@
+<CIBIL>
+		  <party>
+			<partyreference>applicant</partyreference>
+			<rawdata>
+			  <TransactData>
+				<Application.UniqueCPlusApplicationNumber>@@UniqueCPlusApplicationNumber@@</Application.UniqueCPlusApplicationNumber>
+				<ClientSpecific.NumericSL15Var5>@@NumericSL15Var5@@</ClientSpecific.NumericSL15Var5>
+				<ClientSpecific.NumericSL15Var29>@@NumericSL15Var29@@</ClientSpecific.NumericSL15Var29>
+				<ClientSpecific.NumericSL15Var37>@@NumericSL15Var37@@</ClientSpecific.NumericSL15Var37>
+				<ClientSpecific.NumericSL3Var54>@@NumericSL3Var54@@</ClientSpecific.NumericSL3Var54>
+				<ClientSpecific.NumericSL3Var59>@@NumericSL3Var59@@</ClientSpecific.NumericSL3Var59>
+				<ClientSpecific.NumericSL3Var62>@@NumericSL3Var62@@</ClientSpecific.NumericSL3Var62>
+				<ClientSpecific.NumericSL15Var40>@@NumericSL15Var40@@</ClientSpecific.NumericSL15Var40>
+				<ClientSpecific.NumericSL15Var41>@@NumericSL15Var41@@</ClientSpecific.NumericSL15Var41>
+				<ClientSpecific.NumericSL15Var42>@@NumericSL15Var42@@</ClientSpecific.NumericSL15Var42>
+				<ClientSpecific.NumericSL15Var43>@@NumericSL15Var43@@</ClientSpecific.NumericSL15Var43>
+				<ClientSpecific.NumericSL15Var44>@@NumericSL15Var44@@</ClientSpecific.NumericSL15Var44>
+				<ClientSpecific.NumericSL15Var2>@@NumericSL15Var2@@</ClientSpecific.NumericSL15Var2>
+				<ClientSpecific.NumericSL15Var3>@@NumericSL15Var3@@</ClientSpecific.NumericSL15Var3>
+				<ClientSpecific.NumericSL3Var61>@@NumericSL3Var61@@</ClientSpecific.NumericSL3Var61>
+				<ClientSpecific.NumericSL3Var19>@@NumericSL3Var19@@</ClientSpecific.NumericSL3Var19>
+				<ClientSpecific.NumericSL15Var33>@@NumericSL15Var33@@</ClientSpecific.NumericSL15Var33>
+				<ClientSpecific.NumericSL3Var31>@@NumericSL3Var31@@</ClientSpecific.NumericSL3Var31>
+				<ClientSpecific.NumericSL3Var5>@@NumericSL3Var5@@</ClientSpecific.NumericSL3Var5>
+				<ClientSpecific.NumericSL15Var11>@@NumericSL15Var11@@</ClientSpecific.NumericSL15Var11>
+				<ErrorBlock.BureauErrorCode>@@BureauErrorCode@@</ErrorBlock.BureauErrorCode>
+			  </TransactData>
+			  @@RAWDATA@@
+	</rawdata>
+  </party>
+</CIBIL>

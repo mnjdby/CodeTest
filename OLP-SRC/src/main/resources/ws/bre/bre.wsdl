@@ -1,0 +1,121 @@
+<wsdl:definitions targetNamespace="http://serviceimpl.alobr.valuemomentum.com" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://serviceimpl.alobr.valuemomentum.com" xmlns:intf="http://serviceimpl.alobr.valuemomentum.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!-- 
+WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)
+
+  --> 
+<wsdl:types>
+<schema elementFormDefault="qualified" targetNamespace="http://serviceimpl.alobr.valuemomentum.com" xmlns="http://www.w3.org/2001/XMLSchema">
+<element name="invokeBRE">
+<complexType>
+<sequence>
+  <element name="objModel" type="xsd:string" /> 
+  <element name="rawData" type="xsd:string" /> 
+  </sequence>
+  </complexType>
+  </element>
+<element name="invokeBREResponse">
+<complexType>
+<sequence>
+  <element name="invokeBREReturn" type="xsd:string" /> 
+  </sequence>
+  </complexType>
+  </element>
+<element name="retrieveAsyncResponse">
+<complexType>
+<sequence>
+  <element name="sequenceID" type="xsd:string" /> 
+  </sequence>
+  </complexType>
+  </element>
+<element name="retrieveAsyncResponseResponse">
+<complexType>
+<sequence>
+  <element name="retrieveAsyncResponseReturn" type="xsd:string" /> 
+  </sequence>
+  </complexType>
+  </element>
+<element name="invokeBREWithNoRawData">
+<complexType>
+<sequence>
+  <element name="objModel" type="xsd:string" /> 
+  </sequence>
+  </complexType>
+  </element>
+<element name="invokeBREWithNoRawDataResponse">
+<complexType>
+<sequence>
+  <element name="invokeBREWithNoRawDataReturn" type="xsd:string" /> 
+  </sequence>
+  </complexType>
+  </element>
+  </schema>
+  </wsdl:types>
+<wsdl:message name="invokeBREWithNoRawDataResponse">
+  <wsdl:part element="impl:invokeBREWithNoRawDataResponse" name="parameters" /> 
+  </wsdl:message>
+<wsdl:message name="retrieveAsyncResponseResponse">
+  <wsdl:part element="impl:retrieveAsyncResponseResponse" name="parameters" /> 
+  </wsdl:message>
+<wsdl:message name="invokeBRERequest">
+  <wsdl:part element="impl:invokeBRE" name="parameters" /> 
+  </wsdl:message>
+<wsdl:message name="invokeBREResponse">
+  <wsdl:part element="impl:invokeBREResponse" name="parameters" /> 
+  </wsdl:message>
+<wsdl:message name="invokeBREWithNoRawDataRequest">
+  <wsdl:part element="impl:invokeBREWithNoRawData" name="parameters" /> 
+  </wsdl:message>
+<wsdl:message name="retrieveAsyncResponseRequest">
+  <wsdl:part element="impl:retrieveAsyncResponse" name="parameters" /> 
+  </wsdl:message>
+<wsdl:portType name="RupeePowerService">
+<wsdl:operation name="invokeBRE">
+  <wsdl:input message="impl:invokeBRERequest" name="invokeBRERequest" /> 
+  <wsdl:output message="impl:invokeBREResponse" name="invokeBREResponse" /> 
+  </wsdl:operation>
+<wsdl:operation name="retrieveAsyncResponse">
+  <wsdl:input message="impl:retrieveAsyncResponseRequest" name="retrieveAsyncResponseRequest" /> 
+  <wsdl:output message="impl:retrieveAsyncResponseResponse" name="retrieveAsyncResponseResponse" /> 
+  </wsdl:operation>
+<wsdl:operation name="invokeBREWithNoRawData">
+  <wsdl:input message="impl:invokeBREWithNoRawDataRequest" name="invokeBREWithNoRawDataRequest" /> 
+  <wsdl:output message="impl:invokeBREWithNoRawDataResponse" name="invokeBREWithNoRawDataResponse" /> 
+  </wsdl:operation>
+  </wsdl:portType>
+<wsdl:binding name="RupeePowerServiceSoapBinding" type="impl:RupeePowerService">
+  <wsdl:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" /> 
+<wsdl:operation name="invokeBRE">
+  <wsdl:operation soapAction="" /> 
+<wsdl:input name="invokeBRERequest">
+  <wsdl:body use="literal" /> 
+  </wsdl:input>
+<wsdl:output name="invokeBREResponse">
+  <wsdl:body use="literal" /> 
+  </wsdl:output>
+  </wsdl:operation>
+<wsdl:operation name="retrieveAsyncResponse">
+  <wsdl:operation soapAction="" /> 
+<wsdl:input name="retrieveAsyncResponseRequest">
+  <wsdl:body use="literal" /> 
+  </wsdl:input>
+<wsdl:output name="retrieveAsyncResponseResponse">
+  <wsdl:body use="literal" /> 
+  </wsdl:output>
+  </wsdl:operation>
+<wsdl:operation name="invokeBREWithNoRawData">
+  <wsdl:operation soapAction="" /> 
+<wsdl:input name="invokeBREWithNoRawDataRequest">
+  <wsdl:body use="literal" /> 
+  </wsdl:input>
+<wsdl:output name="invokeBREWithNoRawDataResponse">
+  <wsdl:body use="literal" /> 
+  </wsdl:output>
+  </wsdl:operation>
+  </wsdl:binding>
+<wsdl:service name="RupeePowerServiceService">
+<wsdl:port binding="impl:RupeePowerServiceSoapBinding" name="RupeePowerService">
+  <wsdl:address location="http://192.168.84.84:9080/RupeePowerWebService/services/RupeePowerService" /> 
+  </wsdl:port>
+  </wsdl:service>
+  </wsdl:definitions>
